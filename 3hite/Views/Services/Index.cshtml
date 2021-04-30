@@ -1,0 +1,371 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-title text-center">
+                    <h4>Giriş Yap</h4>
+                </div>
+                <div class="d-flex flex-column text-center">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email1" placeholder="E-Posta Adresi">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password1" placeholder="Şifre">
+                        </div>
+                        <button type="button" class="btn btn-info btn-block btn-round">Giriş Yap</button>
+                    </form>
+
+                    <div class="text-center text-muted delimiter">ya da sosyal ağları kullan</div>
+                    <div class="d-flex justify-content-center social-buttons">
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-title text-center">
+                    <h4>Kayıt Ol</h4>
+                </div>
+                <div class="d-flex flex-column text-center">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email1" placeholder="İsim Soyisim">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email1" placeholder="E-Posta Adresi">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password1" placeholder="Şifre">
+                        </div>
+                        <button type="button" class="btn btn-info btn-block btn-round">Kayıt Ol</button>
+                    </form>
+
+                    <div class="text-center text-muted delimiter">ya da sosyal ağları kullan</div>
+                    <div class="d-flex justify-content-center social-buttons">
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    .container {
+        padding: 2rem 0rem;
+    }
+
+
+    .modal-dialog {
+        max-width: 400px;
+    }
+
+        .modal-dialog .modal-content {
+            padding: 1rem;
+        }
+
+    }
+
+    .modal-header .close {
+        margin-top: -1.5rem;
+    }
+
+    .form-title {
+        margin: -2rem 0rem 2rem;
+    }
+
+    .btn-round {
+        border-radius: 3rem;
+    }
+
+    .delimiter {
+        padding: 1rem;
+    }
+
+    .social-buttons .btn {
+        margin: 0 0.5rem 1rem;
+    }
+
+    .signup-section {
+        padding: 0.3rem 0rem;
+    }
+</style>
+
+
+<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+<!-- Popper JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+<!-- Bootstrap JS -->
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+
+
+<div class="breadcumb-area">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 col-md-6">
+                <div class="breadcumb-text">
+                    <h2>Mağaza</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcumb Thumb Area -->
+    <div class="breadcumb-thumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-3">
+            <br />
+            <div class="list-group">
+
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="color:white;background-color:#ffaf02;font-size:larger;">
+                        Kategoriler
+                    </li>
+
+
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Web Geliştirme
+                        <span class="badge badge-warning badge-pill">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Web Tasarım
+                        <span class="badge badge-warning badge-pill">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Logo Tasarım
+                        <span class="badge badge-warning badge-pill">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Sosyal Medya
+                        <span class="badge badge-warning badge-pill">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        SEO İçerik
+                        <span class="badge badge-warning badge-pill">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Marka Tasarım
+                        <span class="badge badge-warning badge-pill">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Marka İmajı
+                        <span class="badge badge-warning badge-pill">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Kurumsal Kimlik
+                        <span class="badge badge-warning badge-pill">1</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="~/Content/Site/img/Packets/KurumsalP.jpg" alt=""></a>
+                        <div class="card-body">
+                          
+
+
+                                <h4 class="card-title">
+                                    <a href="#">Kurumsal Paket</a>
+                                </h4>
+                                <h5>Minimum:₺699</h5>
+                                <p class="card-text">1 Adet Kurumsal Site(Yönetim Panelli)</p>
+                                <p class="card-text">1 Adet Kurumsal Kimlik</p>
+                                <p class="card-text">SEO İçerik(Blog/Haber/Medya sayfaları dahil değildir).</p>
+                        
+
+                            <a href="/Services/Detay/" class="btn cryptos-btn btn-2 m-2">Sipariş</a>
+
+                            <div class="card-footer">
+                                <small class="text-muted">★ ★ ★ ★ ☆</small>
+                            </div>
+                        </div>
+                </div>
+                    </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="~/Content/Site/img/Packets/PersonalP.jpg" alt=""></a>
+
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Kişisel Paket</a>
+                            </h4>
+                            <h5>Minimum:₺250</h5>
+                            <p class="card-text">1 Adet Kişisel Site</p>
+                            <p class="card-text">3 Adet İnstagram Gönderisi</p>
+                            <p class="card-text">SEO Tanıtım İçeriği</p>
+                        </div>
+
+                        <a href="#" class="btn cryptos-btn btn-2 m-2">Sipariş</a>
+
+                        <div class="card-footer">
+                            <small class="text-muted">★ ★ ★ ★ ☆</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="~/Content/Site/img/Packets/DesignP.jpg" alt=""></a>
+
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Web Tasarım</a>
+                            </h4>
+                            <h5>Teklifinizle</h5>
+                            <p class="card-text">Responsive Tasarım</p>
+                            <p class="card-text">Html5 & Css3</p>
+                            <p class="card-text">İlgili Görseller</p>
+                            <p class="card-text">Hız Optimizasyonu(Minify&Bundle)</p>
+                        </div>
+
+                        <a href="#" class="btn cryptos-btn btn-2 m-2">Sipariş</a>
+
+                        <div class="card-footer">
+                            <small class="text-muted">★ ★ ★ ★ ☆</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="~/Content/Site/img/Packets/WebDevelopP.jpg" alt=""></a>
+
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Web Geliştirme</a>
+                            </h4>
+                            <h5>Teklifinizle</h5>
+                            <p class="card-text">1 Adet Yönetim Paneli(Login Page Dahil)</p>
+                            <p class="card-text">1 Adet SQL Server</p>
+                            <p class="card-text">Asp.net/PHP/C# Seçeneği</p>
+                            <p class="card-text">Otomasyon</p>
+                            <p class="card-text">Kolay Kullanım ve Kurulum</p>
+                        </div>
+
+                        <a href="#" class="btn cryptos-btn btn-2 m-2">Sipariş</a>
+
+                        <div class="card-footer">
+                            <small class="text-muted">★ ★ ★ ★ ☆</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="~/Content/Site/img/Packets/SEOP.jpg" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">SEO Paketi</a>
+                            </h4>
+                            <h5>Minimum:₺99</h5>
+                            <p class="card-text">300 Karakterli Metinler</p>
+                            <p class="card-text">Google'da Öne Çıkmak</p>
+                            <p class="card-text">Google Search Console</p>
+                            <p class="card-text">Google Hizmetleri</p>
+                        </div>
+
+                        <a href="#" class="btn cryptos-btn btn-2 m-2">Sipariş</a>
+
+                        <div class="card-footer">
+                            <small class="text-muted">★ ★ ★ ★ ☆</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="~/Content/Site/img/Packets/LogoPaket.jpg" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Logo Paketi</a>
+                            </h4>
+                            <h5>Minimum:₺199</h5>
+                            <p class="card-text">3 Adet Logo</p>
+                            <p class="card-text">6 Adet Revize Hakkı</p>
+                            <p class="card-text">Sosyal Medya Kullanımları</p>
+                            <p class="card-text">.svg .ico Seçeneği</p>
+                        </div>
+
+                        <a href="#" class="btn cryptos-btn btn-2 m-2">Sipariş</a>
+
+                        <div class="card-footer">
+                            <small class="text-muted">★ ★ ★ ★ ☆</small>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.col-lg-9 -->
+
+</div>
+<!-- /.row -->

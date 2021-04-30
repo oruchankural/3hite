@@ -1,0 +1,54 @@
+﻿
+<div class="col-12 col-md-6">
+    <div class="about-content mb-100">
+
+        <div class="section-heading">
+
+
+
+          
+            <h2>Sipariş Oluştur</h2>
+
+            <form action="#" method="post">
+
+                <div class="form-group">
+
+
+                    <input type="number" class="form-control" name="Product" value="@ViewBag.dgr" style="visibility:collapse;" />
+
+                </div>
+                <div class="form-group">
+                    <label for="disabledTextInput">İsim</label>
+                    <input type="text" id="disabledTextInput" name="Name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="disabledTextInput">Soyisim</label>
+                    <input type="text" id="disabledTextInput" name="Surname" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="disabledTextInput">E-Mail</label>
+                    <input type="email" id="disabledTextInput" name="Mail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="disabledTextInput">Telefon Numarası</label>
+                    <input type="tel" id="disabledTextInput" name="Phone" class="form-control" pattern="[0]{1}[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                    <small>Format : 05554446666</small>
+                </div>
+                <div class="form-group">
+                    <label for="disabledTextInput">Bütçeniz</label>
+                    <input type="number" id="disabledTextInput" name="Price" class="form-control"  min="200"  placeholder="Minimum ₺200 olmalı.">
+                </div>
+                <div class="form">
+                    <label for="price">İstekleriniz / Detaylı Açıklama</label>
+                    <textarea name="Mesage" class="form-control" id="message" cols="30" rows="8" placeholder="Mesajınız" required></textarea>
+                </div>
+                <br />
+                <button type="submit" class="btn btn-warning" style="color:white;">Sipariş Oluştur</button>
+
+
+            </form>
+        </div>
+
+    </div>
+
+</div>

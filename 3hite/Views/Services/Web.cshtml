@@ -1,0 +1,42 @@
+﻿@using _3hite.Models.Siniflar;
+@model List<Product>
+@{
+    ViewBag.Title = "Web";
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="cryptos-about-area section-padding-100-0">
+    <div class="container">
+        <div class="row align-items-center">
+            @foreach (var x in Model)
+            {
+                <div class="col-12 col-md-6">
+                    <div class="about-thumbnail mb-100">
+                        <img src="@x.ProductImage" />
+
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="about-content mb-100">
+                        <div class="section-heading">
+
+
+
+                            <h3><span>@x.ProductName</span></h3>
+                            <h5>@x.ProductExp1</h5>
+                            <p>@x.ProductExp2</p>
+                            <a href="/Services/Detay/@x.ProductID" class="btn cryptos-btn mt-30"><i class="fas fa-shopping-cart"></i> Sipariş</a>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+
+
+
+
